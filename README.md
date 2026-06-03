@@ -1,6 +1,8 @@
 # Flipit
 
-Convert mistyped Hebrew ↔ English text anywhere in Windows with a customizable hotkey.
+A tiny Windows utility that instantly fixes mistyped Hebrew ↔ English text with a customizable hotkey.
+
+**Lightweight. Minimalistic. Always ready when you need it.**
 
 ---
 
@@ -34,6 +36,21 @@ Simply select the text (or place the cursor on the relevant line) and press the 
 
 ---
 
+## 🎯 Designed to Stay Out of Your Way
+
+Flipit was built around a simple idea:
+
+Fix keyboard-layout mistakes instantly without interrupting your workflow.
+
+* No popups
+* No notifications
+* No unnecessary UI
+* No background overhead
+
+Just a tiny tray icon and a hotkey that works wherever you type.
+
+---
+
 ## ⚡ Features
 
 * Global hotkey (default: **F1**)
@@ -42,9 +59,10 @@ Simply select the text (or place the cursor on the relevant line) and press the 
 * Works in almost any Windows application
 * No text selected? Automatically handles the current line
 * Silent and instant operation
-* System tray icon with enable/disable toggle
+* Lightweight and minimalistic design
+* Runs quietly in the system tray
+* Near-zero CPU and memory usage when idle
 * Optional startup with Windows
-* Lightweight and resource-efficient
 
 ---
 
