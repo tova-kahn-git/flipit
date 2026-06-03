@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>Flipit</AssemblyName>
+    <RootNamespace>Flipit</RootNamespace>
+
+    <!--
+      EXE icon — embedded as a Win32 resource at compile time.
+      Visible in Explorer, taskbar, Alt+Tab, and PublishSingleFile output.
+      The same .ico is also an EmbeddedResource (see ItemGroup below) so
+      AppIcons.LoadAppIcon() can load it at runtime for the tray and windows.
+    -->
+    <ApplicationIcon>Assets\Icons\flipit.ico</ApplicationIcon>
+
+    <!-- Assembly / file metadata (Explorer → Properties → Details) -->
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Product>Flipit</Product>
+    <Description>Keyboard layout fixer — instantly converts Hebrew ↔ English typing mistakes.</Description>
+    <Company>Flipit</Company>
+    <Copyright>Copyright © 2026 Flipit</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+
+    <!-- Enable .NET platform analyzers (CA rules) for all configurations -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+  </PropertyGroup>
+
+  <!-- Release builds: treat warnings as errors to catch nullable / CA issues before ship -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- CA1416 = platform compatibility; safe to suppress for a Windows-only app -->
+    <NoWarn>CA1416</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Embedded into the assembly — loaded at runtime for the tray icon -->
+    <EmbeddedResource Include="Assets\Icons\flipit.ico" />
+
+    <!--
+      Branding PNGs — embedded into the assembly so they are always available
+      inside the single-file EXE without any loose files required at runtime.
+      They are ALSO copied next to the output so that Debug / non-single-file
+      layouts continue to work and AppIcons can fall back to the file system.
+    -->
+    <EmbeddedResource Include="Assets\Icons\flipit-256.png" />
+    <EmbeddedResource Include="Assets\Icons\flipit-512.png" />
+
+    <Content Include="Assets\Icons\flipit-256.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\flipit-512.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\flipit-16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <!-- SVG is documentation-only; no runtime copy needed -->
+    <None Include="Assets\Icons\flipit.svg" />
+  </ItemGroup>
+
+</Project>
+

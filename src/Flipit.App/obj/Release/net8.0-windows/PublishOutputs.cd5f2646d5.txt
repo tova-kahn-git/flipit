@@ -1,0 +1,15 @@
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Flipit.exe
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Assets\Icons\flipit-256.png
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Assets\Icons\flipit-512.png
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Assets\Icons\flipit-16.png
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Flipit.dll
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Flipit.deps.json
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Flipit.runtimeconfig.json
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Flipit.pdb
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Microsoft.Extensions.DependencyInjection.dll
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Microsoft.Extensions.Logging.dll
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Microsoft.Extensions.Logging.Abstractions.dll
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Microsoft.Extensions.Logging.Debug.dll
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Microsoft.Extensions.Options.dll
+C:\projects\flipit\src\Flipit.App\bin\Release\net8.0-windows\publish\Microsoft.Extensions.Primitives.dll

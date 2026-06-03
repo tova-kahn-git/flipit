@@ -1,0 +1,5 @@
+C:\projects\flipit\publish_test\Flipit.pdb
+C:\projects\flipit\publish_test\Assets\Icons\flipit-256.png
+C:\projects\flipit\publish_test\Assets\Icons\flipit-512.png
+C:\projects\flipit\publish_test\Assets\Icons\flipit-16.png
+C:\projects\flipit\publish_test\Flipit.exe
