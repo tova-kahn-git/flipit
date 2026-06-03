@@ -31,8 +31,8 @@ Simply select the text (or place the cursor on the relevant line) and press the 
 | Typed   | Converted |
 | ------- | --------- |
 | `יקךךם` | `hello`   |
-| `ghbd`  | `עבר`     |
-| `דקךאש` | `english` |
+| `akuo`  | `שלום`     |
+| `קמעךןדי` | `english` |
 
 ---
 
