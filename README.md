@@ -1,82 +1,123 @@
 # Flipit
 
-**Flipit** is a lightweight Windows background utility that fixes text typed using the wrong keyboard layout.
+Convert mistyped Hebrew ↔ English text anywhere in Windows with a customizable hotkey.
 
-## What it does
+---
 
-Press **F1** while text is selected (or anywhere on a line) and Flipit instantly converts the text between Hebrew and English keyboard layouts.
+## 🚀 Download
 
-**Examples:**
-- `יקךךם` → `hello`
-- `ghbd` → `עבר`
+### Latest Release
 
-## Features
+👉 **[Download Flipit](https://github.com/tova-kahn-git/flipit/releases/latest)**
 
-- ⚡ Global F1 hotkey — works in any application
-- 🔄 Auto-detects direction (Hebrew→English or English→Hebrew)
-- 📋 No selection? Automatically selects the current line
-- 🔕 No popups, no dialogs — silent & instant
-- 🖥️ System tray icon with enable/disable toggle
-- 🚀 Optional startup with Windows
-- 💡 Near-zero CPU/memory when idle
+Download, run, and use the configured hotkey whenever text was typed with the wrong keyboard layout.
 
-## Supported Applications
+---
 
-Works in: Notepad, Chrome, Edge, Word, VSCode, IntelliJ IDEA, Slack, Teams, WhatsApp Desktop, and virtually any Windows application.
+## ✨ What is Flipit?
 
-## Requirements
+Ever typed an entire sentence in the wrong language because the keyboard layout was set incorrectly?
 
-- Windows 10/11 (x64)
-- .NET 8 Runtime (Windows Desktop)
+Flipit instantly converts text between Hebrew and English keyboard layouts.
 
-## Building
+Simply select the text (or place the cursor on the relevant line) and press the configured hotkey.
+
+**By default, Flipit uses `F1`, but the hotkey can be customized in Settings.**
+
+### Examples
+
+| Typed   | Converted |
+| ------- | --------- |
+| `יקךךם` | `hello`   |
+| `ghbd`  | `עבר`     |
+| `דקךאש` | `english` |
+
+---
+
+## ⚡ Features
+
+* Global hotkey (default: **F1**)
+* Customizable hotkey
+* Automatic Hebrew ↔ English detection
+* Works in almost any Windows application
+* No text selected? Automatically handles the current line
+* Silent and instant operation
+* System tray icon with enable/disable toggle
+* Optional startup with Windows
+* Lightweight and resource-efficient
+
+---
+
+## 🖥️ Supported Applications
+
+Flipit works in virtually any Windows application, including:
+
+* Notepad
+* Chrome
+* Edge
+* Microsoft Word
+* VS Code
+* IntelliJ IDEA
+* Slack
+* Microsoft Teams
+* WhatsApp Desktop
+
+---
+
+## ⚙️ Settings
+
+Flipit can be configured from the Settings window:
+
+* Change the global hotkey
+* Enable or disable Flipit
+* Start automatically with Windows
+
+---
+
+## 📋 Requirements
+
+* Windows 10 or Windows 11 (64-bit)
+* .NET 8 Runtime
+
+---
+
+## 🛠️ Build from Source
 
 ```bash
 dotnet build src/Flipit.App/Flipit.App.csproj
 ```
 
-## Publishing (single-file executable)
+### Publish Single-File Executable
 
 ```bash
 dotnet publish src/Flipit.App/Flipit.App.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o publish/
 ```
 
-## Architecture
+---
 
-```
+## 🏗️ Project Structure
+
+```text
 /src/Flipit.App
-  /Core            - Interfaces and orchestrator
-  /KeyboardEngine  - Text conversion + keyboard simulation
-  /Clipboard       - Win32 clipboard access
-  /Hooks           - Global hotkey registration
-  /Tray            - System tray + message window
-  /Settings        - Persistence (Windows registry)
-  /Infrastructure  - Win32 P/Invoke + DI composition root
+  /Core            - Application orchestration
+  /KeyboardEngine  - Layout conversion engine
+  /Clipboard       - Clipboard integration
+  /Hooks           - Global hotkey handling
+  /Tray            - System tray functionality
+  /Settings        - User preferences and persistence
+  /Infrastructure  - Win32 integration and composition root
 ```
 
-## Keyboard Layout Mapping
+---
 
-Standard Hebrew keyboard layout (physical key positions):
+## 🖱️ Tray Menu
 
-| EN | HE | EN | HE |
-|----|----|----|-----|
-| e  | ק  | a  | ש  |
-| r  | ר  | s  | ד  |
-| t  | א  | d  | ג  |
-| y  | ט  | f  | כ  |
-| u  | ו  | g  | ע  |
-| i  | ן  | h  | י  |
-| o  | ם  | j  | ח  |
-| p  | פ  | k  | ל  |
-|    |    | l  | ך  |
+* **Enabled** — enable or disable Flipit
+* **Settings** — configure hotkey and startup options
+* **Exit** — close the application
 
-## Tray Menu
+---
 
-- **Enabled** — toggle on/off
-- **Settings** — open settings window (startup toggle)
-- **Exit** — quit the application
+## 📄 License
 
-## License
-
-MIT
-
+MIT License
